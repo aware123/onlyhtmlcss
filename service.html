@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+      <meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+   
+
+  </head>
+  <body>
+    
+  	<div class="container-fluid" ng-controller ="first" ui-view="">
+	
+	<nav ng-controller ="first" class="navbar navbar-expand-sm bg-info" style="font-size:18px;margin-bottom:0">
+      <div class="container-fluid">
+        <div class="navbar-header" >
+          <a class="navbar-brand" href="#" style="font-size:20px;font-weight:bold;">Refixya</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#master">Master</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#sales">Sales</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#repair">Repair</a></li>
+          <li><a href="#payment">Payments</a></li>
+          <li><a href="#stock">Stocks</a></li>
+          <li><a href="#report">Reports</a></li>
+          <li><a href="#ticket">Tickets</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div ui-view=""></div>
+	
+	
+	
+	 <div class="panel panel-default">
+    <div class="panel-heading"><b>Create Jobsheet</b></div></div>
+	<!--  Code Start from here-->
+	
+	<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+       <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-chevron-down"></span> Customer Details
+        </button></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+    <div class="panel-body">
+	<div class="container">
+  <form class="form-inline">
+<div class="row">
+<div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon" >Customer Type</div>
+    <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>cust Type 1</option>
+	<option>cust Type 2</option>
+	<option>cust Type 3</option>
+	</select>
+  </div></div>
+  <div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Name</div>
+    <input type="text" class="form-control" id="name_cntl" placeholder="Name">
+  </div></div>
+  <div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Mobile No</div>
+    <input type="text" class="form-control" id="mobile_cntl" placeholder="Mobile">
+  </div></div>
+  <div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Landline</div>
+    <input type="text" class="form-control" id="landline_cntl" placeholder="Landline">
+  </div></div>
+  </div>
+  <div class="row"><hr></div>
+  <div class="row">
+  <div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Email</div>
+    <input type="text" class="form-control" id="email_cntl" placeholder="Email Id">
+  </div></div>
+  <div class="col-md-3">
+   <div class="input-group mb-6 mr-sm-6 mb-sm-0">
+    <div class="input-group-addon">Address</div>
+    <input type="text" class="form-control" id="add_cntl" placeholder="Address">
+  </div></div>
+ 
+
+   </div>
+</form>
+   </div>
+</div>
+
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+      <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-chevron-down"></span> Product Info
+        </button></a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body"><div class="container">
+  <form class="form-inline">
+<div class="row">
+<div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Model No</div>
+    <input type="text" class="form-control" id="model_cntl" placeholder="Model No">
+  </div></div>
+<div class="col-md-3"> 
+ <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Serial No</div>
+    <input type="text" class="form-control" id="serial_cntl" placeholder="Serial No">
+  </div></div>
+  <div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Problem Reported 1</div>
+    <input type="text" class="form-control" id="problem_rep_cntl1" placeholder="Probelm Report">
+  </div></div>
+  <div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Problem Reported 2</div>
+    <input type="text" class="form-control" id="problem_rep_cntl2" placeholder="Problem Report 2">
+  </div></div>
+  </div>
+  <div class="row"><hr></div>
+  <div class="row">
+  <div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Problem Reported 3</div>
+    <input type="text" class="form-control" id="problem_rep_cntl3" placeholder="Problem Report 3">
+  </div></div>
+  <div class="col-md-3">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Print Remark</div>
+    <input type="text" class="form-control" id="print_remark" placeholder="Print Remark">
+  </div></div>
+   <div class="col-md-3">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Physical Condition</div>
+     <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Physical Condition</option>
+	<option>cust Type 1</option>
+	<option>cust Type 2</option>
+	</select> </div></div>
+   <div class="col-md-3">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Cust. Pre. Approval</div>
+     <select class="form-control" id="select_list_aprov" placeholder="select">
+	<option>Select Cust. Pre. Approval</option>
+	<option>cust Type 1</option>
+	<option>cust Type 2</option>
+	</select> </div></div>
+ 
+
+   </div>
+    <div class="row"><hr></div>
+  <div class="row">
+  <div class="col-md-3">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Priority</div>
+       <select class="form-control" id="Priority" placeholder="select">
+	<option>cust Type 1</option>
+	<option>cust Type 2</option>
+	<option>cust Type 3</option>
+	</select>  </div></div>
+  <div class="col-md-3">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Received Type</div>
+      <select class="form-control" id="select_list_received" placeholder="select">
+	<option>Select Received Type</option>
+	<option>cust Type 2</option>
+	<option>cust Type 3</option>
+	</select>  </div></div>
+   <div class="col-md-3">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Brand</div>
+    <input type="text" class="form-control" id="brand_cntl" placeholder="Brand">
+  </div></div>
+   <div class="col-md-3">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Ducket</div>
+    <input type="text" class="form-control" id="ducket_cntl" placeholder="Ducket">
+  </div></div>
+     </div>
+    <div class="row"><hr></div>
+  <div class="row">
+   <div class="col-md-3">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Curier Person Name</div>
+    <input type="text" class="form-control" id="c_p_cntl" placeholder="Person Name">
+  </div></div>
+   <div class="col-md-3">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <div class="input-group-addon">Mobile No</div>
+    <input type="text" class="form-control" id="Mobile_Number" placeholder="Mobile Number">
+  </div></div>
+ 
+
+   </div>
+</form>
+   </div></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+       <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-chevron-down"></span>  Accesories Details
+        </button></a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">  
+	  <div class="container">
+	  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>SR.No</th>
+        <th>Asst.Type</th>
+        <th>Brand</th>
+      <th>Serial Number</th>
+       <th>Physical Condition</th>
+	     <th>Action</th>
+          
+	 </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{data}</td>
+		 <td>{data}</td>
+        <td>{data}</td>
+        <td>{data}</td>
+       <td>{data}</td>
+	      <td> <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-pencil"></span> Edit 
+        </button>  <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-trash"></span> Delete 
+        </button></td>
+      </tr>
+      <tr>
+     
+       <td>  <input type="text" class="form-control" id="data1" placeholder="SR.NO" readonly></td>
+	     <td>
+     <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Asst. Type</option>
+	<option>cust Type 2</option>
+	<option>cust Type 3</option>
+	</select></td>
+	     <td>  <input type="text" class="form-control" id="data2" placeholder="Brand"></td>
+	    <td>  <input type="text" class="form-control" id="data3" placeholder="Serial Number"></td>
+       <td>  <input type="text" class="form-control" id="data4" placeholder="Physical Condition"></td>
+	 
+	     <td> <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-plus"></span> Add New 
+        </button></td>
+      </tr>
+    
+    </tbody>
+  </table></div>
+  </div>
+    </div>
+  </div>
+  
+   <div class="panel-heading">
+      <input type="text" class="btn btn-info" value="Submit"/>
+	  
+      <input type="text" class="btn btn-info" value="Cancel"/>
+    </div>
+</div>
+	
+	
+	
+	
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--  Code End from here-->
+	
+  	</div>
+  </body>
+</html>
