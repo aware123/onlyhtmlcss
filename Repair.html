@@ -1,0 +1,315 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+      <meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+   <style>
+   .modal-body {
+    padding: 5px;
+}
+   .modal-header {
+    padding: 4px;
+  
+}
+.panel-body {
+    padding: 0px;
+}
+.table {
+    margin-bottom: 0px;
+}
+.alert {
+    padding: 3px;
+    margin-bottom: 20px;
+   
+}
+.table {
+  
+    margin-bottom: 0px; 
+}
+</style>
+
+  </head>
+  <body>
+    
+  	<div class="container-fluid" ng-controller ="first" ui-view="">
+	
+	<nav ng-controller ="first" class="navbar navbar-expand-sm bg-info" style="font-size:18px;margin-bottom:0">
+      <div class="container-fluid">
+        <div class="navbar-header" >
+          <a class="navbar-brand" href="#" style="font-size:20px;font-weight:bold;">Refixya</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#master">Master</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#sales">Sales</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#repair">Repair</a></li>
+          <li><a href="#payment">Payments</a></li>
+          <li><a href="#stock">Stocks</a></li>
+          <li><a href="#report">Reports</a></li>
+          <li><a href="#ticket">Tickets</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div ui-view=""></div>
+	
+	
+	
+	 <div class="panel panel-default">
+    <div class="panel-heading"><b>Create Jobsheet</b></div></div>
+
+<!-- <h2>Panel Heading</h2> -->
+    <div class="panel panel-default">
+        <div class="panel-heading">JobSheet Repair</div>
+
+        <div class="panel-body" ng-controller="RepairController">
+            <div class="panel-body-border panel-heading">Pending Repair:</div>
+                    <table class="table table-bordered table-responsive table-hover">
+                    <tr>
+                        <th>Date</th>
+                        <th>JobSheet No.</th>
+                        <th>Name</th>
+                        <th>Serial No.</th>
+                        <th>Product Condition</th>
+
+                    <tr ng-repeat="jobsheet in jobsheetrepair" ng-click="rowSelect($index)" data-toggle="modal" style="cursor:pointer" data-target="#myModal">
+
+                        <td>{{jobsheet.date_On}}</td>
+
+                        <td>{{jobsheet.JobsheetNo}}</td>
+
+                        <td>{{jobsheet.CustName}}</td>
+
+                        <td>{{jobsheet.SerialNo}}</td>
+
+                        <td>{{jobsheet.PhysicalCondition}}</td>
+                    </tr>
+                </table>
+        </div>
+        
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">JobSheet Details</h4>
+                    </div>
+                     <div class="modal-body">
+                         <div class="panel-body">
+						  <div class="table-responsive">          
+  <table class="table">
+ 
+    <tbody>
+      <tr>
+        <td><b>Job Sheet No.:</b></td>
+        <td>{Datat}</td>
+        <td><b>Stock:</b></td>
+        <td><div class="col-md-10">
+    <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Stock</option>
+	<option>cust Type 2</option>
+	<option>cust Type 3</option>
+	</select>
+  </div></td>
+       
+      </tr>
+	  
+	    <tr>
+        <td><b>Name:</b></td>
+        <td>{Datat}</td>
+        <td><b>Branch:</b	></td>
+        <td><div class="col-md-10">{DAta}</div></td>
+       
+      </tr>
+	    <tr>
+        <td><b>Model:</b></td>
+        <td>{Datat}</td>
+        <td><b>Engg. Name:</b></td>
+        <td><div class="col-md-10">{DAta}</div></td>
+       
+      </tr>
+	    <tr>
+        <td><b>Serial Number:</b></td>
+        <td>{Datat}</td>
+        <td><b>Warranty Status:</b></td>
+        <td><div class="col-md-10"> <label class="radio-inline">
+      <input type="radio" name="optradio">Option 1	
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Option 2
+    </label></div></td>
+       
+      </tr>
+	   <tr>
+        <td><b>Product Condition:</b></td>
+        <td>{Datat}</td>
+        <td><b>WRe=Repair Status:</b></td>
+        <td><div class="col-md-10"> <label class="radio-inline">
+      <input type="radio" name="optradio">Option 1	
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Option 2
+    </label></div></td>
+       
+      </tr>
+	   <tr>
+        <td><b>Date:</b></td>
+        <td>{Datat}</td>
+        <td><b>Customer Approval Status:</b></td>
+        <td><div class="col-md-10"> <label class="radio-inline">
+      <input type="radio" name="optradio">Option 1	
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Option 2
+    </label></div></td>
+       
+      </tr>
+	   <tr>
+        <td><b>Internal Remark:</b></td>
+        <td>{Datat}</td>
+        <td><b>Engineer Remark:</b></td>
+        <td><div class="col-md-10">{Data}</div></td>
+       
+      </tr>
+	 
+    </tbody>
+  </table>
+  
+   <form class="alert alert-success form-inline" style="margin-bottom: 0px;" action="#">
+    <div class="form-group">
+      <label for="email">Fault Found*:</label>
+     <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Fault</option>
+	  <option value="ddlDead"> Dead </option>
+                                                <option value="ddlNoDisplay"> No Display</option>
+                                                <option value="ddlPlugNotCharg"> Plug In Not Charging </option>
+                                                <option value="ddlFanEr"> Fan Error </option>
+                                                <option value="ddlHddntdt"> HDD not detect </option>
+                                    
+	</select>  </div>
+    <div class="form-group">
+      <label for="pwd">Reason:</label>
+     <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Reson</option>
+  <option value="ddlcompmissing" > Components Missing </option>
+                                                <option value="ddlCPUShort"> CPU Short </option>
+                                                <option value="ddlHMFault"> HM Faulty </option>
+	</select>  </div>
+  
+    <button type="submit" class="btn btn-default">Add Fault</button>
+  </form>
+  </div>
+				
+                        </div>
+				
+
+                        <div class="panel-body">
+                            <div class="alert alert-success" style="margin-bottom: 0px;">Part Details:</div>
+							
+							 <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>SR.No</th>
+        <th>Part Name</th>
+        <th>Part Bom</th>
+		  <th>Alternate Part</th>
+        <th>Stock</th>
+		 <th>Action</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#</td>
+        <td> <input type="text" class="form-control" id="add_cntl" placeholder="Part Name"></td>
+        <td> <input type="text" class="form-control" id="add_cntl" placeholder="Part Bom"></td>
+		  <td> <input type="text" class="form-control" id="add_cntl" placeholder="Alternate Part"></td>
+        <td> <input type="text" class="form-control" id="add_cntl" placeholder="Stock"></td>
+		  <td> <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-plus"></span> Add New 
+        </button></td>
+       
+      </tr>
+	  <tr>
+        <td>{Data}</td>
+        <td>{Data}</td>
+        <td>{Data}</td>
+		  <td> {Data}</td>
+        <td>{Data}</td>
+		     <td> <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </button>  <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+				 <form class="alert alert-success form-inline" action="#" style="margin-bottom: 0px;">
+    <div class="form-group">
+      <label for="email">Final Outcome*:</label>
+     <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Approval</option>
+	  <option value="ddlDead"> Dead </option>
+                                                <option value="ddlNoDisplay"> No Display</option>
+                                                <option value="ddlPlugNotCharg"> Plug In Not Charging </option>
+                                                <option value="ddlFanEr"> Fan Error </option>
+                                                <option value="ddlHddntdt"> HDD not detect </option>
+                                    
+	</select>  </div>
+    <div class="form-group">
+      <label for="pwd">Reason:</label>
+     <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Reson</option>
+  <option value="ddlcompmissing" > Components Missing </option>
+                                                <option value="ddlCPUShort"> CPU Short </option>
+                                                <option value="ddlHMFault"> HM Faulty </option>
+	</select>  </div>
+	  <div class="form-group">
+      <label for="pwd">Remark:</label>
+    <input type="text" class="form-control" placeholder="Engineer Remark"> </div>
+  
+  
+  </form>			
+			  <div class="panel-heading" >
+      <input type="submit" class="btn btn-info" value="Submit"/>
+	  
+      <input type="submit" class="btn btn-info" value="Cancel"/>
+    </div>
+                        </div>
+
+                                 
+                     </div>
+                
+                </div>
+            </div>
+        </div>
+        
+     
+     </div>
+
+
+
+	
+	
+	
+	<!--  Code End from here-->
+	
+  	</div>
+  </body>
+</html>
