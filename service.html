@@ -27,6 +27,20 @@ hr {
 border-radius:4px;
 }
 </style>
+<script>
+function send(){
+//alert("call");
+$( "#name_list" ).empty();
+var numbers = ['Namdeo', 'Ankush', 'Kailash', 'Sarfaraz', 'Manoj'];
+var option = '';
+for (var i=0;i<numbers.length;i++){
+   option += '<option value="'+ numbers[i] + '">' ;
+}
+
+$('#name_list').append(option);
+}
+</script>
+
   </head>
   <body>
     
@@ -89,13 +103,9 @@ border-radius:4px;
   </div></div>
   <div class="col-md-2">
    <div class="input-group mb-3 mr-sm-3 mb-sm-0">
-    <input type="text" class="form-control" list="name_list" id="name_cntl" placeholder="Name">
+    <input type="text" class="form-control" list="name_list"  id="name_cntl" placeholder="Name" onkeyup='send()'>
 	<datalist id="name_list">
-    <option value="Abc">
-    <option value="PQR">
-    <option value="std">
-    <option value="OPR">
-    <option value="xyz">
+ 
   </datalist>
   </div></div>
   <div class="col-md-2">
