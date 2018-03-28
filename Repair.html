@@ -86,11 +86,11 @@
                         <th>Serial No.</th>
                         <th>Product Condition</th>
 
-                    <tr ng-repeat="jobsheet in jobsheetrepair" ng-click="rowSelect($index)" data-toggle="modal" style="cursor:pointer" data-target="#myModal">
+                    <tr ng-repeat="jobsheet in jobsheetrepair" ng-click="rowSelect($index)" >
 
                         <td>{{jobsheet.date_On}}</td>
 
-                        <td>{{jobsheet.JobsheetNo}}</td>
+                        <td data-toggle="modal" style="cursor:pointer;color:blue;text-decoration:underline" data-target="#myModal">{{jobsheet.JobsheetNo}}</td>
 
                         <td>{{jobsheet.CustName}}</td>
 
