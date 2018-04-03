@@ -100,13 +100,10 @@
                     </tr>
                 </table>
         </div>
-        
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+            </div>
+            <div class="panel panel-default">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">JobSheet Details</h4>
+                               <h4 class="modal-title">JobSheet Details</h4>
                     </div>
                      <div class="modal-body">
                          <div class="panel-body">
@@ -224,11 +221,19 @@
   <table class="table">
     <thead>
       <tr>
-        <th>SR.No</th>
-        <th>Part Name</th>
-        <th>Part Bom</th>
-		  <th>Alternate Part</th>
+        <th>Part.No</th>
+        <th> Brand</th>
+        <th>A.Part</th>
+		  <th>Repair</th>
+        <th>Replace</th>
+		 <th> Pending</th>
         <th>Stock</th>
+		  <th>Used QTY</th>
+        <th>Price</th> 
+		<th>SAles Price</th>
+        <th>GST</th>
+		  <th>W. QTY</th>
+        <th>Other</th>
 		 <th>Action</th>
      
       </tr>
@@ -236,17 +241,55 @@
     <tbody>
       <tr>
         <td>#</td>
-        <td> <input type="text" class="form-control" id="add_cntl" placeholder="Part Name"></td>
-        <td> <input type="text" class="form-control" id="add_cntl" placeholder="Part Bom"></td>
-		  <td> <input type="text" class="form-control" id="add_cntl" placeholder="Alternate Part"></td>
-        <td> <input type="text" class="form-control" id="add_cntl" placeholder="Stock"></td>
-		  <td> <button type="button" class="btn btn-default btn-sm">
+        <td> <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Fault</option>
+	  <option value="ddlDead"> Dead </option>
+                                                <option value="ddlNoDisplay"> No Display</option>
+                                                <option value="ddlPlugNotCharg"> Plug In Not Charging </option>
+                                                <option value="ddlFanEr"> Fan Error </option>
+                                                <option value="ddlHddntdt"> HDD not detect </option>
+                                    
+	</select> </td>
+        <td> <select class="form-control" id="select_list_cntl" placeholder="select">
+	<option>Select Fault</option>
+	  <option value="ddlDead"> Dead </option>
+                                                <option value="ddlNoDisplay"> No Display</option>
+                                                <option value="ddlPlugNotCharg"> Plug In Not Charging </option>
+                                                <option value="ddlFanEr"> Fan Error </option>
+                                                <option value="ddlHddntdt"> HDD not detect </option>
+                                    
+	</select> </td>
+		  <td> <label class="radio-inline">
+      <input type="radio" name="optradioselect" checked=true>	
+    </label></td>
+        <td> <label class="radio-inline">
+      <input type="radio" name="optradioselect">
+    </label></td>
+ <td>  <label class="radio-inline">
+      <input type="radio" name="optradioselect">
+    </label></td>
+        <td> <input type="text" class="form-control" id="add_cntl" placeholder=""></td>
+		  <td> <input type="text" class="form-control" id="add_cntl" placeholder=""></td>
+        <td> <input type="text" class="form-control" id="add_cntl" placeholder=""></td>
+		 <td> <input type="text" class="form-control" id="add_cntl" placeholder=""></td>
+        <td> <input type="text" class="form-control" id="add_cntl" placeholder=""></td>
+		  <td> <input type="text" class="form-control" id="add_cntl" placeholder=""></td>
+        <td> <input type="text" class="form-control" id="add_cntl" placeholder=""></td>
+				
+		<td> <button type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-plus"></span> Add New 
         </button></td>
        
       </tr>
 	  <tr>
         <td>{Data}</td>
+        <td>{Data}</td>
+        <td>{Data}</td>
+		  <td> {Data}</td>
+		   <td>{Data}</td>
+        <td>{Data}</td>
+        <td>{Data}</td>
+		  <td> {Data}</td> <td>{Data}</td>
         <td>{Data}</td>
         <td>{Data}</td>
 		  <td> {Data}</td>
@@ -280,10 +323,10 @@
                                                 <option value="ddlCPUShort"> CPU Short </option>
                                                 <option value="ddlHMFault"> HM Faulty </option>
 	</select>  </div>
-	  <div class="form-group">
+		<!-- <div class="form-group">
       <label for="pwd">Remark:</label>
     <input type="text" class="form-control" placeholder="Engineer Remark"> </div>
-  
+  -->
   
   </form>			
 			  <div class="panel-heading" >
@@ -297,11 +340,8 @@
                      </div>
                 
                 </div>
-            </div>
-        </div>
         
-     
-     </div>
+    
 
 
 
