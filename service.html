@@ -8,7 +8,8 @@
 	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
    
 <style>.panel-body {
     padding: 5px;
@@ -254,12 +255,11 @@ alert(val);
   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
       <input type="text" class="form-control" id="Mobile_Number" placeholder="Mobile Number">
   </div></div>
-  <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
+    <div class="col-md-2">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+      <input type="date" class="form-control" id="Date" placeholder=" Date">
+  </div></div>
+ 
 
    </div>
 </form>
@@ -340,7 +340,11 @@ alert(val);
 
 
 	
-	
+	 <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
 	
 	
 	
