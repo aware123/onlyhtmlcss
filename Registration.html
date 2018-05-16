@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+      <meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+   
+<style>.panel-body {
+    padding: 5px;
+}
+.panel-heading {
+    padding: 5px 5px;
+	}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #f5f5f5;
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle
+{
+border-radius:4px;
+}
+</style>  <style>
+   .modal-body {
+    padding: 5px;
+}
+   .modal-header {
+    padding: 4px;
+  
+}
+
+.table {
+    margin-bottom: 0px;
+}
+.alert {
+    padding: 3px;
+    margin-bottom: 20px;
+   
+}
+.table {
+  
+    margin-bottom: 0px; 
+}
+</style>
+<script>
+function send(){
+//alert("call");
+$( "#name_list" ).empty();
+var numbers = ['Namdeo', 'Ankush', 'Kailash', 'Sarfaraz', 'Manoj'];
+var option = '';
+for (var i=0;i<numbers.length;i++){
+   option += '<option value="'+ numbers[i] + '">' ;
+}
+
+$('#name_list').append(option);
+}
+</script>
+
+  </head>
+  <body>
+    
+  	<div class="container-fluid" ng-controller ="first" ui-view="">
+	
+
+    <div ui-view=""></div>
+	
+	
+	
+	 <div class="panel panel-default" style="margin-bottom:0">
+    <div class="panel-heading"><b>	Branch Master Registration Form
+   </b></div></div>
+	<!--  Code Start from here-->
+	
+	<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+ 
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#">
+      <button type="button" class="btn btn-default btn-sm">
+         Official Details
+        </button></a>
+      </h4>
+    </div>
+    <div id="" class="panel-collapse collapse in">
+      <div class="panel-body"><div class="container">
+  <form class="form-inline">
+<div class="row">
+  <div class="col-md-2">
+  <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+     <select class="form-control" id="select_list_cntl" placeholder="Branch">
+	<option>Select Branch</option>
+	<option>Pune</option>
+	<option>Mumbai</option>
+	</select> </div></div>
+<div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="Department" placeholder="Department">
+  </div></div>
+<div class="col-md-2"> 
+ <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+     <input type="text" class="form-control" id="landline_cntl" placeholder="Contact Number">
+  </div></div>
+  <div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="email_cntl1" placeholder="Email ID">
+  </div></div>
+  <div class="col-md-4">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="address_cntl2" placeholder="Address">
+  </div></div>
+ 
+ 
+ 
+  </div>
+ 
+</form>
+   </div></div>
+    </div>
+  </div>
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#">
+      <button type="button" class="btn btn-default btn-sm">
+       Personal Details
+        </button></a>
+      </h4>
+    </div>
+    <div id="" class="panel-collapse collapse in">
+      <div class="panel-body"><div class="container">
+  <form class="form-inline">
+<div class="row">
+ 
+<div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="name" placeholder="First Name">
+  </div></div>
+  
+<div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="name" placeholder="Middle Name">
+  </div></div>
+  
+<div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="name" placeholder="Last Name">
+  </div></div>
+<div class="col-md-2"> 
+ <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+     <input type="text" class="form-control" id="mob_no" placeholder="Mobile Number">
+  </div></div>
+  <div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="Email" placeholder="Email ID">
+  </div></div>
+  <div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="Address" placeholder="Home Address">
+  </div></div>
+  
+  
+  </div>
+ <div class="row"><hr></div>
+ <div class="row">
+<div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="date" class="form-control" id="jdate" placeholder="Joining Date">
+  </div></div>
+<div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <input type="text" class="form-control" id="pass_xt" placeholder="Password">
+  </div></div>
+
+  <div class="col-md-2">
+   <div class="input-group mb-3 mr-sm-3 mb-sm-0">
+    <button type="button" class="btn btn-default">
+          <span class="glyphicon glyphicon-plus"></span> Genrate Password
+        </button>
+  </div></div>
+  </div>
+ 
+</form>
+   </div></div>
+    </div>
+  </div>
+  
+   <div class="panel-heading">
+      <input type="submit" class="btn btn-info" value="Submit"/>
+	  
+      <input type="submit" class="btn btn-info" value="Cancel"/>
+    </div>
+</div>
+	
+	
+	
+	
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--  Code End from here-->
+	
+  	</div>
+  </body>
+</html>
