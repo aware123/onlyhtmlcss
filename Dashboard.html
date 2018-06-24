@@ -61,6 +61,11 @@ background-color:#d9edf7;
 border: 1px solid #a94442;text-decoration:none;
 padding:8px}
 thead{background-color:#d9edf7;}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #ef20208c;
+}
 </style>
 
 
@@ -84,17 +89,18 @@ thead{background-color:#d9edf7;}
           <li><a href="#stock">Stocks</a></li>
           <li><a href="#report">Reports</a></li>
           <li><a href="#ticket">Tickets</a></li>
+
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right" style="margin-right: 7px;">
           <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
          <!-- <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>-->
-		<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+		<div class="dropdown" style="margin-top:9%">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Logout
   <span class="caret"></span></button>
   <ul class="dropdown-menu">
-    <li><a href="#">HTML</a></li>
-    <li><a href="#">CSS</a></li>
-    <li><a href="#">JavaScript</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Settings</a></li>
+    <li><a href="#">Logout</a></li>
   </ul>
 </div>
         </ul>
