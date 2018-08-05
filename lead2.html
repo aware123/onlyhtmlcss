@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <meta name="description" content="">
+        <meta name="keywords" content=" Admin">
+
+        <title></title>
+          
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet">
+ <script src="dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+		
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+
+<style>
+::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: yellow;
+}
+
+::selection {
+    color: red;
+    background: yellow;
+}
+.form-control
+{
+	color:black;
+	border:1px solid black;
+}
+</style>
+    </head>
+    <body id="skin-blur-violate" style="
+    color: black;
+    font-family: Times New Roman;
+    font-weight: bold;
+">
+
+        <header id="header" class="media">
+            <a href="#" id="menu-toggle"></a> 
+            <a class="logo pull-left" href="#"> </a>
+            
+            <div class="media-body">
+                <div class="media" id="top-menu">
+                    
+                    
+
+                    <div id="time" class="pull-right">
+                        <span id="hours"></span>
+                        :
+                        <span id="min"></span>
+                        :
+                        <span id="sec"></span>
+                    </div>
+                    
+                    <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+            
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                
+                <!-- Sidbar Widgets -->
+                <div class="side-widgets overflow">
+                    <!-- Profile Menu -->
+                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                        <a href="#" data-toggle="dropdown">
+                            <img class="profile-pic animated" src="https://cdn4.iconfinder.com/data/icons/rcons-user/32/child_boy-512.png" alt="">
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="#">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                             <li><a href="#">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="code/logout.php">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                        </ul>
+                        <h4 class="m-0"></h4>
+                        
+                    </div>
+                    
+                    <!-- Calendar -->
+                    <div class="s-widget m-b-25">
+                        <div id="sidebar-calendar"></div>
+                    </div>
+                    
+                    <!-- Feeds -->
+             
+                       
+                    <!-- Projects -->
+                 
+                </div>
+                
+                <!-- Side Menu -->
+                <ul class="list-unstyled side-menu">
+                    <li class="active">
+                        <a class="sa-side-home" href="index.php">
+                            <span class="menu-item">Dashboard</span>
+                        </a>
+                    </li>
+                
+                   
+                </ul>
+
+            </aside>
+        
+            <!-- Content -->
+           <section id="content" class="container">
+            
+               
+            
+<table class="table table-inverse table-hover table-bordered" style="background-color:none" id="example">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th> Name</th>
+                                    <th>Email</th>
+                                    <th>Mobile No</th>
+									  <th>Source</th>
+									   <th>City</th>
+									    <th>Date</th>
+									
+                                </tr>
+                            </thead>
+                           
+                        </table>
+                   	 
+                <!-- Compose -->
+                <div class="modal fade" id ="compose-message">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">NEW REVIEW</h4>
+                            </div>
+                            <div class="modal-header p-0">
+                                <input type="text" class="form-control input-sm input-transparent" placeholder="Name...">
+                            </div>
+                            <div class="modal-header p-0">
+                                <input type="text" class="form-control input-sm input-transparent" placeholder="Title...">
+                            </div>
+                            <div class="p-relative">
+                                <div class="message-options">
+                                    <img src="img/icon/tile-actions.png" alt="">
+                                </div>
+                                <textarea class="message-editor" placeholder="Message..."></textarea>
+                            </div>
+                            <div class="modal-footer m-0">
+                                <button class="btn">Send</button>
+                                <button class="btn">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+           
+        </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script> <!-- jQuery Library -->
+        <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+     <script src="js/datetimepicker.min.js"></script> <!-- Date & Time Picker -->
+        <!-- Charts -->
+        <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+        <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+
+        <script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+        <script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+        <script src="js/charts.js"></script> <!-- All the above chart related functions -->
+
+        <!-- Map -->
+        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+        <script src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+
+        <!--  Form Related -->
+        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+
+        <!-- UX -->
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+   <script src="js/editor.min.js"></script> <!-- WYSIWYG Editor -->
+        <!-- Other -->
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+          <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script> 
+  <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment-with-locales.min.js"></script>
+<script>
+function searching()
+{
+	var date1= document.getElementById("sdate").value;
+	var date2= document.getElementById("edate").value;
+alert(date1);
+	}
+function getjson()
+{
+var obj, dbParam, xmlhttp;
+obj = { "table":"cust_requirement", "limit":100 };
+dbParam = JSON.stringify(obj);
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+	
+		 var count = Object.keys(myObj).length;
+			var rows = "";
+		var c;
+		for(var i=0;i<count;i++)
+		{
+			 var da = new Date(myObj[i].date);
+		var ds=da.toString();
+    var date = moment(new Date(ds.substr(0, 20)));
+	
+		c=i+1;
+		    rows += "<tr><td>" +c+ "</td><td>" +myObj[i].name + "</td><td>" +myObj[i].email + "</td><td>" +myObj[i].mobile_no + "</td><td>" +myObj[i].source + "</td><td>" +myObj[i].city + "</td><td>" +date.format("DD/MMM/YYYY h:mm a") + "</td></tr>";
+
+		}
+		 $('#example').append(rows);
+	 $('#example').DataTable(); }
+};
+xmlhttp.open("GET", "http://embellish.international/fonts/whitefont.php?x=" + dbParam, true);
+//xmlhttp.open("GET", "http://embellish.international/js/whitefont.php?x=" + dbParam, true);
+//xmlhttp.open("GET", "http://embellish.international/offer/whitefont.php?x=" + dbParam, true);
+xmlhttp.send();
+}
+</script>
+
+
+        <!-- All JS functions -->
+        <script src="js/functions.js"></script>
+
+		 <script type='text/javascript'>
+        $(document).ready(function () {
+                 getjson();
+            console.log("HELLO")
+            function exportTableToCSV($table, filename) {
+			
+                var $headers = $table.find('tr:has(th)')
+                    ,$rows = $table.find('tr:has(td)')
+	
+                    // Temporary delimiter characters unlikely to be typed by keyboard
+                    // This is to avoid accidentally splitting the actual contents
+                    ,tmpColDelim = String.fromCharCode(11) // vertical tab character
+                    ,tmpRowDelim = String.fromCharCode(0) // null character
+
+                    // actual delimiter characters for CSV format
+                    ,colDelim = '","'
+                    ,rowDelim = '"\r\n"';
+
+                    // Grab text from table into CSV formatted string
+                    var csv = '"';
+                    csv += formatRows($headers.map(grabRow));
+                    csv += rowDelim;
+                    csv += formatRows($rows.map(grabRow)) + '"';
+
+                    // Data URI
+                    var csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+
+                // For IE (tested 10+)
+                if (window.navigator.msSaveOrOpenBlob) {
+                    var blob = new Blob([decodeURIComponent(encodeURI(csv))], {
+                        type: "text/csv;charset=utf-8;"
+                    });
+                    navigator.msSaveBlob(blob, filename);
+                } else {
+                    $(this)
+                        .attr({
+                            'download': filename
+                            ,'href': csvData
+                            //,'target' : '_blank' //if you want it to open in a new window
+                    });
+                }
+
+                //------------------------------------------------------------
+                // Helper Functions 
+                //------------------------------------------------------------
+                // Format the output so it has the appropriate delimiters
+                function formatRows(rows){
+                    return rows.get().join(tmpRowDelim)
+                        .split(tmpRowDelim).join(rowDelim)
+                        .split(tmpColDelim).join(colDelim);
+                }
+                // Grab and format a row from the table
+                function grabRow(i,row){
+                     
+                    var $row = $(row);
+                    //for some reason $cols = $row.find('td') || $row.find('th') won't work...
+                    var $cols = $row.find('td'); 
+                    if(!$cols.length) $cols = $row.find('th');  
+
+                    return $cols.map(grabCol)
+                                .get().join(tmpColDelim);
+                }
+                // Grab and format a column from the table 
+                function grabCol(j,col){
+                    var $col = $(col),
+                        $text = $col.text();
+
+                    return $text.replace('"', '""'); // escape double quotes
+
+                }
+            }
+
+
+            // This must be a hyperlink
+            $("#export").click(function (event) {
+                // var outputFile = 'export'
+                var outputFile = window.prompt("What do you want to name your output file") || 'export';
+                outputFile = outputFile.replace('.csv','') + '.csv'
+                 
+                // CSV
+                exportTableToCSV.apply(this, [$('#example'), outputFile]);
+                
+                // IF CSV, don't do event.preventDefault() or return false
+                // We actually need this to be a typical hyperlink
+            });
+        });
+    </script>
+		
+    </body>
+
+</html>
